@@ -1,0 +1,9 @@
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\bin\Release\Pressure_Calibrate_Tool.exe.config
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\bin\Release\Pressure_Calibrate_Tool.exe
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\bin\Release\Pressure_Calibrate_Tool.pdb
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.csprojResolveAssemblyReference.cache
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.Form1.resources
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.Properties.Resources.resources
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.csproj.GenerateResource.Cache
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.exe
+D:\VS_Practice\Pressure_Calibrate_Tool\Pressure_Calibrate_Tool\obj\Release\Pressure_Calibrate_Tool.pdb
