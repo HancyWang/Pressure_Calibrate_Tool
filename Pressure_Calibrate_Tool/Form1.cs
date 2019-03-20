@@ -167,8 +167,22 @@ namespace Pressure_Calibrate_Tool
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ////debug 测试一下float
+            //float test_a = 12.75F;
+            //int test_b = (int)test_a;
+            //MessageBox.Show(Convert.ToString(test_b));
+            ////System.Runtime.InteropServices.Marshal.Copy()
+            //System.IO.MemoryStream mems = new System.IO.MemoryStream();
+            //System.IO.BinaryWriter biw = new System.IO.BinaryWriter(mems);
+            //System.IO.BinaryReader bir = new System.IO.BinaryReader(mems);
+            //biw.Write(test_a);
+            //mems.Position = 0;
+            //Int32 test_c= bir.ReadInt32();
+            //MessageBox.Show(Convert.ToString(test_c));
+
             LoadPicture();
             Init_SerialPort();
+            
         }
 
         private Int32 abs(Int32 a, Int32 b)
@@ -185,6 +199,8 @@ namespace Pressure_Calibrate_Tool
             float rate1 = (float)((abs(point_2.adc_value , point_1.adc_value)) / (abs(point_2.mmgH_value , point_1.mmgH_value)));
             float rate2 = (float)((abs(point_3.adc_value, point_1.adc_value)) / (abs(point_3.mmgH_value, point_1.mmgH_value)));
             return (Int32)((rate1 + rate2) / 2);
+
+            //return String.Format("{0:F2}",(rate1+rate2)/2);
         }
 
         private void ParseFrame0x60()
@@ -266,16 +282,16 @@ namespace Pressure_Calibrate_Tool
                 {
                     if (m_buffer[HEAD] == 0xFF) //帧头
                     {
-                        int len = Convert.ToUInt32(m_buffer[LEN]); // 获取帧长度(不包含checksum1和checksum2)
+                        int len = Convert.ToInt32(m_buffer[LEN]); // 获取帧长度(不包含checksum1和checksum2)
                         if (m_buffer.Count < len + 2)  //数据没有接收完全，继续接收
                         {
                             break;
                         }
-                        int checksum = 256 * Convert.ToUInt32(m_buffer[len]) + Convert.ToUInt32(m_buffer[len + 1]);
+                        int checksum = 256 * Convert.ToInt32(m_buffer[len]) + Convert.ToInt32(m_buffer[len + 1]);
                         int sum = 0;
                         for (int i = 1; i < len; i++) //校验和不包含包头
                         {
-                            sum += Convert.ToUInt32(m_buffer[i]);
+                            sum += Convert.ToInt32(m_buffer[i]);
                         }
                         //MessageBox.Show(sum.ToString());
                         if (checksum == sum)
